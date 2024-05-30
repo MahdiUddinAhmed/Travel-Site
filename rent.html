@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <logo>
+        <h1>Logo</h1>
+    </logo>
+    <nav>
+        <a href='index.html'>Home</a>
+        <a href='#' class="active">Rent Hotel</a>
+        <a href='flight.html'>Flight</a>
+        <a href='login.html'><button>Sign Up</button></a>
+    </nav>
+</header>
+
+<Segment class='hotelS'>
+    <div class='hotelContainer'>
+        <h1>Find Your Hotel</h1>
+        <form id="hotelForm" class='Rform' action="fetch_hotels.php" method="post">
+            <label class='Rlabel' for="source">Source:</label>
+            <input class='RInput' type="text" id="source" name="source" required><br><br>
+            <label class='Rlabel' for="destination">Destination:</label>
+            <input class='RInput' type="text" id="destination" name="destination" required><br><br>
+            <label class='Rlabel' for="price">Price Range:</label>
+            <input class='RInput' type="number" id="price" name="price" min="0"><br><br>
+            <button type="submit">Search Hotels</button>
+        </form>
+    </div>
+</Segment>
+
+<Segment class='hotelS'>
+    <div class='hotelContainer'>
+        <h1>Hotels</h1>
+        <div id="results">
+            <!-- Hotel data will be inserted here -->
+        </div>
+    </div>
+</Segment>
+
+<!-- JavaScript to handle form submission and display hotel data -->
+<script src="API/hotel.js">
+
+</script>
+
+</body>
+</html>
